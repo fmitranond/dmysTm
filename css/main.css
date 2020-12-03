@@ -1,0 +1,166 @@
+:root {
+    --heading: 2.5rem; /* 40px */
+    --subheading: 1.3125rem; /* 21px */
+    --plan-title: 1.125rem; /* 18px */
+    --plan-price: 3rem; /* 48px */
+    --button: 0.875rem; /* 14px */
+    /* description: 16px */
+
+    /* ## color themes ## */
+    --accent: #00cdac; /* turquoise */
+    --prime-gdient: #3741a0; /* very dark cyon */
+    --dark500: #4e4e4e; /* very dark grey */
+    --light500: #e5e3e8; /* light greyish violet */
+    --light400: #fafafa; /* very light grey - almost white */
+    --bk-gdient: linear-gradient(130deg, #3741a0, #00cdac);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: var(--dark500);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+/* ## typography ## */
+h1,
+.plan .title,
+.button {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: var(--heading);
+    font-weight: 900;
+    
+}
+
+.section-title {
+    color: var(--accent);
+}
+
+.fs-500 {
+    font-size: var(--subheading);
+    font-weight: 300;
+}
+
+.plan .title {
+    font-size: var(--plan-title);
+
+}
+
+.plan .price {
+    font-size: var(--plan-price);
+    font-weight: 900;
+}
+
+.plan .price span {
+    font-size: calc(var(--plan-price) - 45%);
+    display: block;
+    font-weight: 300;
+    line-height: 0.5em;
+}
+
+/* ### button ### */
+
+.button {
+    font-size: var(--button);
+    font-weight: 900;
+}
+
+/* ###### layout ##### */
+
+h1,
+h2,
+p {
+    margin-top: 0;
+}
+
+h1 {
+    padding: 2em 0 0;
+    margin-bottom: 0;
+}
+
+/* ### plans & team: general ### */
+
+.plans {    
+    margin: 0 auto;
+    padding: 2em 0.5em;
+    /* background-color: yellowgreen; */
+}
+@media (min-width: 835px) {
+    .plans {
+        display: flex;
+        justify-content: space-between;
+        max-width: 840px;
+    }
+}
+
+.plan {
+    width: 100%;
+    max-width: 260px;
+    box-sizing: border-box;
+    background-color: var(--light500);
+    padding: 2em;
+    margin: 0 auto 1em;
+    border-radius: 5%;
+    
+}
+
+.plan .title {
+    margin-bottom: 1.5em;
+}
+
+.plan .price {
+    margin-bottom: 0.75em;
+}
+
+.plan .description {
+    margin-bottom: 2.25em;
+}
+
+.bg_accent {
+    background: var(--bk-gdient);
+    color: var(--light400);
+}
+
+.fs-500 {
+    padding: 0;
+    margin: 0 0 0.5em;
+}
+
+/* ### button ### */
+.button {
+    background-color: var(--dark500);
+    padding: 0.85em 1.25em;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--light500);
+}
+
+.button:focus,
+.button:hover {
+    background-color: var(--accent);
+}
+
+/* ### button: modified ### */
+
+.bg_accent .button {
+    color: var(--dark500);
+    background-color: var(--light400);
+}
+
+.bg_accent .button:focus,
+.bg_accent .button:hover {
+    color: var(--light400);
+    background-color: var(--dark500);
+}
+
+.button_accent {
+    background-color: var(--accent);
+}
+
+
