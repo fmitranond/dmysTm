@@ -25,20 +25,16 @@ body {
 }
 
 /* ## typography ## */
-h1,
+.section-title,
 .plan .title,
 .button {
     text-transform: uppercase;
 }
 
-h1 {
-    font-size: var(--heading);
-    font-weight: 900;
-    
-}
-
 .section-title {
     color: var(--accent);
+    font-size: var(--heading);
+    font-weight: 900;
 }
 
 .fs-500 {
@@ -70,39 +66,65 @@ h1 {
     font-weight: 900;
 }
 
-/* ###### layout ##### */
+/* ----- layout ----- */
 
 h1,
 h2,
+h3,
 p {
     margin-top: 0;
 }
 
-h1 {
+.section-title {
     padding: 2em 0 0;
     margin-bottom: 0;
 }
 
+section {
+    background-color: lightskyblue;
+}
+
 /* ### plans & team: general ### */
+
+.bg_light {
+    background-color: var(--light500);
+    color: inherit;
+}
+
+.bg_dark {
+    background-color: var(--dark500);
+    color: var(--light400);
+}
+
+.bg_accent {
+    background: var(--bk-gdient);
+    color: var(--light400);
+}
+
+.fs-500 {
+    padding: 0;
+    margin: 0 0 0.5em;
+}
+
+/* ### plans ### */
 
 .plans {    
     margin: 0 auto;
     padding: 2em 0.5em;
-    /* background-color: yellowgreen; */
+    background-color: lightgreen;
 }
 @media (min-width: 835px) {
     .plans {
         display: flex;
         justify-content: space-between;
-        max-width: 840px;
+        max-width: 840px; /* using em perhaps */
     }
 }
 
 .plan {
     width: 100%;
-    max-width: 260px;
-    box-sizing: border-box;
-    background-color: var(--light500);
+    max-width: 260px; /* using em perhaps */
+    box-sizing: border-box;    
     padding: 2em;
     margin: 0 auto 1em;
     border-radius: 5%;
@@ -121,15 +143,21 @@ h1 {
     margin-bottom: 2.25em;
 }
 
-.bg_accent {
-    background: var(--bk-gdient);
-    color: var(--light400);
+/* ### team ### */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightyellow;
+}
+.team-members { /* could perhaps be the same as Plan style?? */
+    width: 100%;
+    max-width: 30em;
 }
 
-.fs-500 {
-    padding: 0;
-    margin: 0 0 0.5em;
-}
+/* .team-member {
+    display: flex;
+} */
 
 /* ### button ### */
 .button {
