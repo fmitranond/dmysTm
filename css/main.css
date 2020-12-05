@@ -106,29 +106,38 @@ section {
     margin: 0 0 0.5em;
 }
 
-/* ### plans ### */
-
-.plans {    
-    margin: 0 auto;
-    padding: 2em 0.5em;
-    background-color: lightgreen;
+.plans,
+.team-members {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightyellow;
 }
-@media (min-width: 835px) {
-    .plans {
-        display: flex;
-        justify-content: space-between;
-        max-width: 840px; /* using em perhaps */
-    }
+.team-members {
+    flex-flow: row wrap;
+
+}
+
+.plan,
+.team-member {
+    box-sizing: border-box;    
 }
 
 .plan {
-    width: 100%;
-    max-width: 260px; /* using em perhaps */
-    box-sizing: border-box;    
+    width: 15em;   
     padding: 2em;
-    margin: 0 auto 1em;
-    border-radius: 5%;
-    
+    border-radius: 2.5%;        
+}
+.team-member {
+    display: flex;
+    width: 25em;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+.team-member img {
+    width: 100%;
+    max-width: 10em;
+    border-radius: 5px;
 }
 
 .plan .title {
@@ -142,22 +151,6 @@ section {
 .plan .description {
     margin-bottom: 2.25em;
 }
-
-/* ### team ### */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: lightyellow;
-}
-.team-members { /* could perhaps be the same as Plan style?? */
-    width: 100%;
-    max-width: 30em;
-}
-
-/* .team-member {
-    display: flex;
-} */
 
 /* ### button ### */
 .button {
