@@ -115,6 +115,7 @@ section {
 }
 .team-members {
     flex-flow: row wrap;
+    width: 6 0em;
 
 }
 
